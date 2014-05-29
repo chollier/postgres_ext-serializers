@@ -18,14 +18,13 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency     'postgres_ext', '~> 2.1.0'
+  spec.add_runtime_dependency     'postgres_ext', '~> 2.2.0'
   spec.add_runtime_dependency     'active_model_serializers'
 
   spec.add_development_dependency 'bundler', '~> 1.3'
-  spec.add_development_dependency 'actionpack', '~> 4.0.0'
+  spec.add_development_dependency 'actionpack', '~> 4.1.0'
   spec.add_development_dependency 'rake'
   spec.add_development_dependency 'minitest'
-  spec.add_development_dependency 'm'
   spec.add_development_dependency 'bourne', '~> 1.3.0'
   spec.add_development_dependency 'database_cleaner'
   spec.add_development_dependency 'dotenv'
