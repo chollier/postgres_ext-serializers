@@ -38,7 +38,7 @@ module PostgresExt::Serializers::ActiveModel
       @_embedded << relation.table_name
 
       klass = ActiveRecord::Relation === relation ? relation.klass : relation
-      serializer_class = _serializer_class(klass)
+      serializer_class = _serializer_class(klass) ? _serializer_class(klass) : @options[:each_serializer]
       _serializer = serializer_class.new klass.new, options
 
       attributes = serializer_class._attributes
